@@ -11,9 +11,10 @@
   <title>Frontend Mentor | Age calculator app</title>
 </head>
 
-<body class="bg-grey100 font-poppins">
-  <div class="bg-white mx-6 my-20 rounded-t-xl rounded-bl-xl rounded-br-[30%]">
-    <div class="flex p-5 gap-2">
+<body class="bg-grey100 font-poppins overflow-hidden">
+  <div
+    class="bg-white w-[375px] sm:w-[700px] max-sm:mx-5 sm:mx-auto my-20 sm:p-6 rounded-t-xl rounded-bl-xl rounded-br-[30%]">
+    <div class="flex p-5 gap-2 sm:w-[60%]">
       <label class="text-grey500 font-bold text-[0.9rem]">DAY
         <input type="number" id="day-input"
           class="block border border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]" />
@@ -27,17 +28,20 @@
           class="block border border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]" />
       </label>
     </div>
-    <div class="relative">
+    <div class="max-sm:relative max-sm:flex md:flex md:flex-row-reverse md:items-center md:mx-5">
       <div class="bg-purple500 w-fit rounded-[100%] p-4 mx-auto z-10">
-        <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="w-7"/>
+        <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="w-7" />
       </div>
-      <div class="bg-grey200 h-[0.1rem] w-[90%] mx-5 absolute top-[50%] z-0"></div>
+      <div class="bg-grey200 h-[0.1rem] w-[90%] md:w-[100%]  max-sm:mx-5 max-sm:absolute max-sm:top-[50%] z-0"></div>
     </div>
 
     <div class="px-5 py-12" id="total">
-      <p class="text-[2.5rem] font-extrabold italic" id="total-years"><span class="text-purple500">38</span> years</p>
-        <p class="text-[2.5rem] font-extrabold italic" id="total-years"><span class="text-purple500">3</span> months</p>
-          <p class="text-[2.5rem] font-extrabold italic" id="total-years"><span class="text-purple500">26</span> days</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
+          class="text-purple500">38</span> years</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
+          class="text-purple500">3</span> months</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
+          class="text-purple500">26</span> days</p>
     </div>
   </div>
 </body>
