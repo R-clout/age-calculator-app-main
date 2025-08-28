@@ -4,12 +4,17 @@ const year = document.getElementById("year-input");
 const calculateButton = document.getElementById("age-calculate");
 const inputs = document.querySelectorAll(".input")
 
+
+let dayformatted = Number(days.value);
+
+
+
 function calculateage(){
    
 }
 
 inputs.forEach(input => input.addEventListener('input', () => {
-     if(input.value == ""){
+     if(input.value === ""){
           input.parentElement.classList.remove("text-grey500");
           input.parentElement.classList.add("text-red400");
           input.classList.remove("border-grey200");
@@ -26,11 +31,28 @@ inputs.forEach(input => input.addEventListener('input', () => {
           input.classList.add("focus:outline-purple500");
           input.nextElementSibling.classList.add("hidden");
         }
-
-        console.log(input)
 }))
 
 
-
+// days.addEventListener("input", () => {
+//     if(dayformatted < 1 || dayformatted > 31){
+//         days.parentElement.classList.remove("text-grey500");
+//           days.parentElement.classList.add("text-red400");
+//           days.classList.remove("border-grey200");
+//           days.classList.add("border-red400");
+//           days.classList.remove("focus:outline-purple500")
+//           days.classList.add("focus:outline-red400")
+//           days.nextElementSibling.classList.remove("hidden");
+//         days.nextElementSibling.textContent = "must be a valid day";
+//     } else {
+//          input.parentElement.classList.remove("text-red400");
+//           input.parentElement.classList.add("text-grey500");
+//           input.classList.remove("border-red400");
+//           input.classList.add("border-grey200");
+//           input.classList.remove("focus:outline-red400")
+//           input.classList.add("focus:outline-purple500");
+//           input.nextElementSibling.classList.add("hidden");
+//     }
+// })
 
 calculateButton.addEventListener("click", calculateage);
