@@ -11,28 +11,29 @@
   <title>Frontend Mentor | Age calculator app</title>
 </head>
 
-<body class="bg-grey100 font-poppins overflow-hidden">
+<body class="bg-grey100 font-poppins overflow-hidden ">
   <div
     class="bg-white w-[375px] sm:w-[700px] max-sm:mx-5 sm:mx-auto my-20 sm:p-6 rounded-t-xl rounded-bl-xl rounded-br-[30%]">
     <div class="flex p-5 gap-2 sm:w-[60%]">
-      <label class="text-grey500 font-bold text-[0.9rem]">DAY
-        <input type="number" id="day-input"
-          class="input block border border-grey200 text-grey500 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
-          placeholder="DD" />
-        <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden">this field is required</p>
-      </label>
-      <label class="text-grey500 font-bold text-[0.9rem]">MONTH
-        <input type="number" id="month-input"
-          class="input block border text-grey500 border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
-          placeholder="MM" />
-        <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden">this field is required</p>
-      </label>
-      <label class="text-grey500 font-bold text-[0.9rem]">YEAR
-        <input type="number" id="year-input"
-          class="input block border text-grey500 border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
-          placeholder="YYYY" />
-        <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden">this field is required</p>
-      </label>
+      <form class="flex" id="form">
+        <label class="text-grey500 font-bold text-[0.9rem]">DAY
+          <input type="number" id="day-input"
+            class="input block border border-grey200 text-grey500 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
+            placeholder="DD" />
+          <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden" class="small"></p>
+        </label>
+        <label class="text-grey500 font-bold text-[0.9rem]">MONTH
+          <input type="number" id="month-input"
+            class="input block border text-grey500 border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
+            placeholder="MM" />
+          <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden"></p>
+        </label>
+        <label class="text-grey500 font-bold text-[0.9rem]">YEAR
+          <input type="number" id="year-input"
+            class="input block border text-grey500 border-grey200 focus:outline-purple500 active:border-purple500 focus py-2 px-3 font-bold rounded-lg w-[90%]"
+            placeholder="YYYY" />
+          <p class="text-[0.5rem] px-0.5 py-1 text-red400 hidden"></p>
+        </label>
     </div>
     <div class="max-sm:relative max-sm:flex md:flex md:flex-row-reverse md:items-center md:mx-5">
       <button class="bg-purple500 w-fit rounded-[100%] p-4 mx-auto z-10" id="age-calculate">
@@ -40,14 +41,15 @@
       </button>
       <div class="bg-grey200 h-[0.1rem] w-[90%] md:w-[100%]  max-sm:mx-5 max-sm:absolute max-sm:top-[50%] z-0"></div>
     </div>
+    </form>
 
     <div class="px-5 py-12" id="total">
-      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
-          class="text-purple500">- -</span> years</p>
-      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
-          class="text-purple500">- -</span> months</p>
-      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span
-          class="text-purple500">- -</span> days</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span class="text-purple500"
+          id="total-year">- -</span> years</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span class="text-purple500"
+          id="total-months">- -</span> months</p>
+      <p class="text-[2.5rem] sm:text-[4rem] font-extrabold italic" id="total-years"><span class="text-purple500"
+          id="total-days">- -</span> days</p>
     </div>
   </div>
   <script src="./script.js"></script>
