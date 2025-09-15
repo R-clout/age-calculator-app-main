@@ -65,15 +65,25 @@ inputs.forEach((i) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-
     const inputDay = parseInt(days.value, 10);
     const inputMonth = parseInt(month.value, 10);
     const inputYear = parseInt(year.value, 10);
-
-    let calcDay = currentDay;
-    let calcMonth = currentMonth;
-    let calcYear = currentYear;
+    
+        // Prevent calculation if any input is empty
+        inputs.forEach((i) => {
+                if(!i.value){
+                        i.nextElementSibling.classList.remove("hidden");
+                        i.nextElementSibling.innerText = "this field is required";
+                        i.classList.remove("focus:outline-purple500");
+                        i.classList.add("focus:outline-red400");
+                        i.classList.remove("border-grey200");
+                        i.classList.add("border-red400");
+                }
+        })
+    
+        let calcDay = currentDay;
+        let calcMonth = currentMonth;
+        let calcYear = currentYear;
 
     if (inputDay > calcDay) {
         calcDay += months[inputMonth - 1];
@@ -84,9 +94,11 @@ form.addEventListener('submit', (e) => {
         calcYear -= 1;
     }
 
-    totalDays.innerHTML = calcDay - inputDay;
-    totalMonth.innerHTML = calcMonth - inputMonth;
-    totalYear.innerHTML = calcYear - inputYear;
+        if (!isNaN(inputDay) && !isNaN(inputMonth) && !isNaN(inputYear)) {
+                totalDays.innerHTML = calcDay - inputDay;
+                totalMonth.innerHTML = calcMonth - inputMonth;
+                totalYear.innerHTML = calcYear - inputYear;
+        }
 });
 
 
