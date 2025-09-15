@@ -29,7 +29,7 @@ inputs.forEach((i) => {
                         i.classList.remove("border-grey200");
                         i.classList.add("border-red400");
                 }
-               else if(month.value > 12){
+               else if(month.value > 12 || month.value < 1){
                         month.nextElementSibling.classList.remove("hidden");
                         month.nextElementSibling.innerText = "must be valid month";
                         month.classList.remove("focus:outline-purple500");
@@ -37,7 +37,7 @@ inputs.forEach((i) => {
                         month.classList.remove("border-grey200");
                         month.classList.add(border-red400);
                 }
-               else  if(days.value > 31){
+               else  if(days.value > 31 || days.value > 1){
                         days.nextElementSibling.classList.remove("hidden");
                         days.nextElementSibling.innerText = "must be valid day";
                         days.classList.remove("focus:outline-purple500");
