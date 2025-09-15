@@ -37,7 +37,7 @@ inputs.forEach((i) => {
                         month.classList.remove("border-grey200");
                         month.classList.add(border-red400);
                 }
-               else  if(days.value > 31 || days.value > 1){
+               else  if(days.value > 31 || days.value < 1){
                         days.nextElementSibling.classList.remove("hidden");
                         days.nextElementSibling.innerText = "must be valid day";
                         days.classList.remove("focus:outline-purple500");
